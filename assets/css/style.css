@@ -1,0 +1,21 @@
+#logo {
+    width: 200px;
+    height: 150px;
+}
+.header{
+    background-color: grey;
+    border-bottom: 1px solid black;
+}
+body{ 
+    background-color: grey;
+
+}
+.lucky-button {
+    width: 100px;
+    height: 100px;
+}
+.footer {
+    background-color: black;
+    width: 100%;
+    color: white;
+}

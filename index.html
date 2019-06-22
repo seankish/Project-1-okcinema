@@ -1,119 +1,67 @@
 <!DOCTYPE html>
 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>~-SteamStack-~</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/style.css">
-        <script src="assets/javascript/javascript.js" async defer></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>~-SteamStack-~</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/javascript/javascript.js" async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     </head>
     <body>
-        <div class ="row">
-            <div class= "container-fluid"><h1 class ="website-title text-center">STEAMSTACK</h1></div>  
-        <div class="container-fluid">
-            <div class="row">
-                <h2 class= "Content-title col-md-12 text-center">Today's Most popular Games on Steam</h2>   
+            <div class= "d-flex justify-content-between flex-row header">
+                   <button type="button" class="btn btn-secondary lucky-button">I'm Feeling Lucky!</button>
+                   <img id="logo" src="assets/images/okCinemaLogo.png" alt="OK-Cinema">
+                   <form>
+                           <div class="form-group">
+                             <label for="Search">Search</label>
+                             <input type="Searches" class="form-control" id="search-input" aria-describedby="Search Box" placeholder="Search for a Movie">
+                           </div>
+                   </form>
             </div>
-            <!-- first row of 3 players + steam sidebar -->
-        <div class= "row">
-            <!-- 1st game display-- -->
-            <div class="row">
-                <div class = "col-md-3 game0">
-                    <div class = "col-md-12">
-                        <img class="game0-logo logo" src="">
-                        <h4 class="game0-title title text-center">Title here</h4> 
-                    </div>
-                     <div class= "row">
-                         <div class= "col-md-5 player yt-player-game0 "></div>
-                         <div class= "col-md-5 player twitch-player-game0"></div>
-                    </div>
+        <div class ="container">
+                <div class= "movie-title-box d-flex flex-column">
+                        <h1 class= "title">Title Goes here!</h1>
+                        <h3 class= "genre"> Genre</h3>
+                <div class ="r3-box d-flex flex-row justify-content-between">
+                        <h3>Rating:</h3>
+                        <h3>Runtime:</h3>
+                        <h3>Release:</h3>
                 </div>
-            </div>
-            <!-- 2nd game display -->
-            <div class="row">
-                    <div class = "col-md-3 game1">
-                        <div class = "col-md-12">
-                            <img class="game1-logo logo" src="">
-                            <h4 class="game1-title title text-center">Title here</h4> 
-                        </div>
-                         <div class= "row">
-                             <div class= "col-md-5 player yt-player-game1 "></div>
-                             <div class= "col-md-5 player twitch-player-game1"></div>
-                        </div>
-                    </div>
-            </div>
-                <!-- 3rd game display -->
-                <div class="row">
-                        <div class = "col-md-3 game2">
-                            <div class = "col-md-12">
-                                <img class="game2-logo logo" src="">
-                                <h4 class="game2-title title text-center">Title here</h4> 
-                            </div>
-                             <div class= "row">
-                                 <div class= "col-md-5 player yt-player-game2 "></div>
-                                 <div class= "col-md-5 player twitch-player-game2"></div>
-                            </div>
-                        </div>
+                <div class ="synopsis"><h3>Synopsis:</h3> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio, quo consectetur, expedita nostrum dolores reprehenderit assumenda iusto sint consequatur nobis porro quaerat eos neque dolorum molestias dicta et odio alias eum laboriosam error ipsa cumque! Explicabo commodi iusto quo a minima, non fugit molestias vel blanditiis alias voluptatem placeat nemo eum provident consequuntur hic nesciunt in eius perferendis? Laudantium, saepe! Harum, ad nobis quisquam perferendis voluptatem tenetur reprehenderit numquam pariatur accusantium vitae obcaecati debitis, hic deleniti assumenda dignissimos, natus nesciunt nostrum. Velit provident itaque veritatis! Expedita, culpa ipsum facilis, incidunt architecto rerum earum officiis assumenda aperiam, harum necessitatibus voluptates a.</div>
+                
+                <div class ="cast-directors-box d-flex flex-row justify-content-between">
+                        <h3> Main Cast: </h3>
+                        <h3>Directors:</h3>
                 </div>
-                <!-- steam user sidebar -->
-                <div class = "col-md-2 steam-sidebar h-100"></div>
+
+                <div class= "Trailer-video d-flex flex-row justify-content-between">
+                        <div class = "trailer-heading flex-column d-flex"> <h3>Trailer</h3>
+                                <div class ="movie-trailer-video">asdfasdf</div>
+                        </div>
+                        <div class= "empty-space"></div>
+                        <div class = "review-heading flex-column d-flex"> <h3>Movie Review</h3>
+                                <div class ="movie-trailer-video">dfdfd</div>
+                </div> 
+              
+
+
+
+
         </div>
-        <!-- 2nd row of 3 players -->
-        <div class="row">
-            <!-- 4th game display -->
-            <div class="row">
-                <div class = "col-md-3 game3">
-                    <div class = "col-md-12">
-                        <img class="game3-logo logo" src="">
-                        <h4 class="game3-title title text-center">Title here</h4> 
-                    </div>
-                        <div class= "row">
-                            <div class= "col-md-5 player yt-player-game3 "></div>
-                            <div class= "col-md-5 player twitch-player-game3"></div>
-                    </div>
-                </div>
-            </div>
-            <!-- 5th game display -->
-            <div class="row">
-                <div class = "col-md-3 game4">
-                    <div class = "col-md-12">
-                        <img class="game4-logo logo" src="">
-                        <h4 class="game4-title title text-center">Title here</h4> 
-                    </div>
-                        <div class= "row">
-                            <div class= "col-md-5 player yt-player-game4"></div>
-                            <div class= "col-md-5 player twitch-player-game4"></div>
-                    </div>
-                </div>
-            </div>
-                <!-- 6th game display -->
-                <div class="row">
-                    <div class = "col-md-3 game2">
-                        <div class = "col-md-12">
-                            <img class="game5-logo logo" src="">
-                            <h4 class="game5-title title text-center">Title here</h4> 
-                        </div>
-                            <div class= "row">
-                                <div class= "col-md-5 player yt-player-game5 "></div>
-                                <div class= "col-md-5 player twitch-player-game5"></div>
-                        </div>
-                    </div>
-                </div>
-        </div>
-
-
-
-
-
-
-      </div>
-
-
-
-   
-    </body>
+       
+           
+       
+               
+               <script src="" async defer></script>
+           </body>
+           <footer class ="footer d-flex flex-row justify-content-center"> COPYRIGHT STEAMsTACK $QUAD 2019</footer>
 </html>
