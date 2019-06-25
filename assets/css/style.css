@@ -1,21 +1,92 @@
 #logo {
-    width: 200px;
-    height: 150px;
+  width: 200px;
+  height: 150px;
 }
-.header{
-    background-color: grey;
-    border-bottom: 1px solid black;
+.header {
+  background-color: grey;
+  border-bottom: 1px solid black;
 }
-body{ 
-    background-color: grey;
-
+body {
+  background-color: grey;
 }
 .lucky-button {
-    width: 100px;
-    height: 100px;
+  width: 100px;
+  height: 100px;
 }
 .footer {
-    background-color: black;
-    width: 100%;
-    color: white;
+  background-color: black;
+  width: 100%;
+  color: white;
+}
+.title {
+  text-align: center;
+}
+.genre {
+  text-align: center;
+}
+.movie-title-box {
+  border: 5px solid;
+  border-right: 5px solid;
+  border-left: 5px solid;
+  border-bottom: 2.5px solid;
+  padding: 25px;
+  color: white;
+  border-color: #170142;
+  background: #515b99;
+}
+.r3-box {
+  border: 2.5px solid;
+  border-right: 5px solid;
+  border-left: 5px solid;
+  border-bottom: 2.5px solid;
+  color: white;
+  border-color: #170142;
+  background: #515b99;
+}
+.synopsis {
+  border: 2.5px solid;
+  border-right: 5px solid;
+  border-left: 5px solid;
+  border-bottom: 2.5px solid;
+  color: white;
+  border-color: #170142;
+  background: #515b99;
+}
+.cast-directors-box {
+  border: 2.5px solid;
+  border-right: 5px solid;
+  border-left: 5px solid;
+  border-bottom: 2.5px solid;
+  color: white;
+  border-color: #170142;
+  background: #515b99;
+}
+.trailer-heading {
+  border: 2.5px solid;
+  border-right: 5px solid;
+  border-left: 5px solid;
+  border-bottom: 2.5px solid;
+  color: white;
+  border-color: #170142;
+  background: #515b99;
+  padding: 200px;
+  padding-top: 0%;
+}
+.review-heading {
+  border: 2.5px solid;
+  border-right: 5px solid;
+  border-left: 5px solid;
+  border-bottom: 2.5px solid;
+  color: white;
+  border-color: #170142;
+  background: #515b99;
+  padding: 200px;
+  padding-top: 0%;
+}
+body {
+  margin: 1%;
+}
+.lucky-button {
+  height: 45px;
+  width: 200px;
 }
