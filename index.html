@@ -14,60 +14,99 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    </head>
-    <body>
-            <div class= "d-flex justify-content-between flex-row header">
-                   <button type="button" class="btn btn-secondary lucky-button">I'm Feeling Lucky!</button>
-                   <img id="logo" src="assets/images/okCinemaLogo.png" alt="OK-Cinema">
-                   <form>
-                           <div class="form-group">
-                               <!-- This should probably be a button otherwise there is no way to search it -->
-                             
-                             <input type="Searches" class="form-control" id="search-input" aria-describedby="Search Box" placeholder="Search for a Movie">
-                             <button id= "searchButton" for="Search">Search</button>
-                           </div>
-                   </form>
-            </div>
-        <div class ="container">
-                <div class= "movie-title-box d-flex flex-column">
-                                <h1 class="title">Title Goes here!</h1>
-                                <h3 class= "genre"> Genre</h3>
-                </div>
-                        
-                <div class ="r3-box d-flex flex-row justify-content-around">
-                        <h3 class= "rating">Rating:</h3>
-                        <h3 class= "runtime">Runtime:</h3>
-                        <h3 class= "releaseDate">Release:</h3>
-                </div>
-                <div class ="synopsis"><h3>Synopsis:</h3> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio, quo consectetur, expedita nostrum dolores reprehenderit assumenda iusto sint consequatur nobis porro quaerat eos neque dolorum molestias dicta et odio alias eum laboriosam error ipsa cumque! Explicabo commodi iusto quo a minima, non fugit molestias vel blanditiis alias voluptatem placeat nemo eum provident consequuntur hic nesciunt in eius perferendis? Laudantium, saepe! Harum, ad nobis quisquam perferendis voluptatem tenetur reprehenderit numquam pariatur accusantium vitae obcaecati debitis, hic deleniti assumenda dignissimos, natus nesciunt nostrum. Velit provident itaque veritatis! Expedita, culpa ipsum facilis, incidunt architecto rerum earum officiis assumenda aperiam, harum necessitatibus voluptates a.</div>
-                
-                <div class ="cast-directors-box d-flex flex-row justify-content-around">
-                        <h3 class = "cast"> Main Cast: </h3>
-                        <h3 class = "directors">Directors:</h3>
-                </div>
 
-                <div class= "Trailer-video d-flex flex-row justify-content-between">
-                        <div class = "trailer-heading flex-column d-flex"> <h3>Trailer</h3>
-                                <div class ="movie-trailer-video">asdfasdf</div>
-                        </div>
-                        <div class= "empty-space"></div>
-                        <div class = "review-heading flex-column d-flex"> <h3>Movie Poster</h3>
-                                <div class ="movie-poster">dfdfd</div>
-                </div> 
-              
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="d-flex justify-content-between flex-row header">
+        <button type="button" class="btn btn-secondary lucky-button">I'm Feeling Lucky!</button>
+        <img id="logo" src="assets/images/okCinemaLogo.png" alt="OK-Cinema">
+        <form>
+            <div class="form-group">
+                <!-- This should probably be a button otherwise there is no way to search it -->
+
+                <input type="Searches" class="form-control" id="search-input" aria-describedby="Search Box"
+                    placeholder="Search for a Movie">
+                <button id="searchButton" for="Search">Search</button>
+            </div>
+        </form>
+    </div>
+    <div class="container movie-screen">
+        <div class="movie-title-box d-flex flex-column">
+            <h1 class="title">Title Goes here!</h1>
+            <h3 class="genre"> Genre</h3>
+        </div>
+
+        <div class="r3-box d-flex flex-row justify-content-around">
+            <h3 class="rating">Rating:</h3>
+            <h3 class="runtime">Runtime:</h3>
+            <h3 class="releaseDate">Release:</h3>
+        </div>
+        <div class="synopsis">
+            <h3>Synopsis:</h3>
+            <div class="synopsis1">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio, quo consectetur, expedita nostrum
+                dolores reprehenderit assumenda iusto sint consequatur nobis porro quaerat eos neque dolorum molestias
+                dicta et odio alias eum laboriosam error ipsa cumque! Explicabo commodi iusto quo a minima, non fugit
+                molestias vel blanditiis alias voluptatem placeat nemo eum provident consequuntur hic nesciunt in eius
+                perferendis? Laudantium, saepe! Harum, ad nobis quisquam perferendis voluptatem tenetur reprehenderit
+                numquam pariatur accusantium vitae obcaecati debitis, hic deleniti assumenda dignissimos, natus nesciunt
+                nostrum. Velit provident itaque veritatis! Expedita, culpa ipsum facilis, incidunt architecto rerum
+                earum officiis assumenda aperiam, harum necessitatibus voluptates a.
+            </div>
+        </div>
+
+        <div class="cast-directors-box d-flex flex-row justify-content-around">
+            <h3 class="cast"> Main Cast: </h3>
+            <h3 class="directors">Directors:</h3>
+        </div>
+
+        <div class="Trailer-video d-flex flex-row justify-content-between">
+            <div class="trailer-heading flex-column d-flex">
+                <h3>Trailer</h3>
+                <div class="movie-trailer-video">asdfasdf</div>
+            </div>
+            <div class="empty-space"></div>
+            <div class="review-heading flex-column d-flex">
+                <h3>Movie Poster</h3>
+                <div class="movie-poster">dfdfd</div>
+            </div>
+
 
 
 
 
         </div>
-       
-           
-       
-               
-               <script src="" async defer></script>
-           </body>
-           <footer class ="footer d-flex flex-row justify-content-center"> COPYRIGHT STEAMsTACK $QUAD 2019</footer>
-           <script src="assets/javascript/app.js" async defer></script>
+        </div>
+
+        <!-- THIS ALL NEEDS TO BE FLEXBOXED -->
+        <div class="container feeling_lucky">
+
+            <div class="movieList"></div>
+            <div class="movieGenres">
+                <div class="comedy movieCat">Comedy</div>
+                <div class="horror movieCat">Horror</div>
+                <div class="romance movieCat">Romance</div>
+                <div class="action movieCat">action</div>
+                <div class="sciFi movieCat">sciFi</div>
+                <div class="drama movieCat">drama</div>
+                <div class="indie movieCat">indie</div>
+                <div class="thriller movieCat">thriller</div>
+                <div class="musical movieCat">musical</div>
+                <div class="western movieCat">western</div>
+                <div class="documentary movieCat">documentary</div>
+                <div class="fantasy movieCat">fantasy</div>
+            </div>
+
+        </div>
+
+
+
+
+        <script src="" async defer></script>
+</body>
+<footer class="footer d-flex flex-row justify-content-center"> COPYRIGHT STEAMsTACK $QUAD 2019</footer>
+<script src="assets/javascript/app.js" async defer></script>
+
 </html>
