@@ -1,4 +1,6 @@
-//Our very own Database
+
+//On click button
+
 var comedyArray=["Deadpool","Bridesmaids","21 Jump Street","Hot Fuzz", "Zombieland", "The Hangover", "Airplane!", "Ghostbusters","Mean Girls", "Robin Hood Men in Tights"];
 var horrorArray=["The conjuring", "Psycho", "The conjuring 2", "the grudge", "Us", "A quiet place", "It follows", "Annable", "Paranormal Activity", "Scream"];
 var romanceArray=["The fault in our stars", "The Notebook", "Call me By your name", "A star is born", "La la land", "One day", "Love actually", "Love Story", "Pride and Prejudice", "Casablanca"];
@@ -12,123 +14,14 @@ var musicalsArray=["Enchanted","La La Land", "A Star is Born", "Mamma Mia", "Les
 var indieArray=["Lady Bird", "The Big Sick", "Call me by Your Name", "Boyhood", "Tangerine", "Winter's Bone", "Manchester by the Sea", "Blue Jay", "Krisha", "Green Room"];
 var thrillerArray=["Annabelle", "Child's Play", "Ma", "Get Out", "Don't Breathe", "Seven", "The Silence of the Lambs", "Shutter Island", "Inception", "Zodiac" ];
 
-//How things will appear on the page initally
-$(".feeling_lucky").css("display", "none");
-$(".titlePage").css("display","inline");
-$(".movie-screen").css("display", "none");
+// Omdb api call
 
-
-//Function for clikcing the Searching button in the top right corner
-$("#searchButton").on("click", function(e){
+$(".searchButton").on("click", function(e){
   e.preventDefault();
-  var movie = $("#search-input").val();
+  var movie = $(".search-input").val();
   
-  displayMovie(movie);
-  
-});
-
-
-
-
-//Function for clicking the "Feeling Lcuky" Button at the top of the screen
-$(".lucky-button").on("click", function(event){
-  event.preventDefault()
-  console.log('clicked')
-  $(".feeling_lucky").css("display", "inline");
-  $(".titlePage").css("display","none");
-  $(".movie-screen").css("display", "none");
-});
-
-//All these functions are for the feeling lucky random movies!
-$(".comedy").on("click", function(){
-  var randomNumber = Math.floor(Math.random()*11);
-  var randomMovie = comedyArray[randomNumber];
-  displayMovie(randomMovie);
-
-});
-$(".horror").on("click", function(){
-  var randomNumber = Math.floor(Math.random()*11);
-  var randomMovie = horrorArray[randomNumber];
-  displayMovie(randomMovie);
-
-});
-$(".romance").on("click", function(){
-  var randomNumber = Math.floor(Math.random()*11);
-  var randomMovie = romanceArray[randomNumber];
-  displayMovie(randomMovie);
-
-});
-$(".action").on("click", function(){
-  var randomNumber = Math.floor(Math.random()*11);
-  var randomMovie = actionArray[randomNumber];
-  displayMovie(randomMovie);
-
-});
-$(".sciFi").on("click", function(){
-  var randomNumber = Math.floor(Math.random()*11);
-  var randomMovie = sciFiArray[randomNumber];
-  displayMovie(randomMovie);
-
-});
-$(".drama").on("click", function(){
-  var randomNumber = Math.floor(Math.random()*11);
-  var randomMovie = dramaArray[randomNumber];
-  displayMovie(randomMovie);
-
-});
-$(".indie").on("click", function(){
-  var randomNumber = Math.floor(Math.random()*11);
-  var randomMovie = indieArray[randomNumber];
-  displayMovie(randomMovie);
-
-});
-$(".thriller").on("click", function(){
-  var randomNumber = Math.floor(Math.random()*11);
-  var randomMovie = thrillerArray[randomNumber];
-  displayMovie(randomMovie);
-
-});
-$(".musical").on("click", function(){
-  var randomNumber = Math.floor(Math.random()*11);
-  var randomMovie = musicalsArray[randomNumber];
-  displayMovie(randomMovie);
-
-});
-$(".western").on("click", function(){
-  var randomNumber = Math.floor(Math.random()*11);
-  var randomMovie = westernArray[randomNumber];
-  displayMovie(randomMovie);
-
-});
-$(".documentary").on("click", function(){
-  var randomNumber = Math.floor(Math.random()*11);
-  var randomMovie = documentaryArray[randomNumber];
-  displayMovie(randomMovie);
-
-});
-$(".fantasy").on("click", function(){
-  var randomNumber = Math.floor(Math.random()*11);
-  var randomMovie = fantasyArray[randomNumber];
-  displayMovie(randomMovie);
-
-});
-
-
-
-
-
-
-
-
-//Function that will display all the movie data to the page
-function displayMovie(movie){
-  $(".feeling_lucky").css("display", "none");
-  $(".titlePage").css("display","none");
-  $(".movie-screen").css("display", "inline");
-
-  //So we can use movie for querying youtube
-  var movieWithDash = movie.replace(" ","-");
-  var queryURL = "https://www.omdbapi.com/?t=" + movieWithDash + "&apikey=trilogy";
+  movie.replace(" ","-");
+  var queryURL = "https://www.omdbapi.com/?t=" + movie + "&apikey=trilogy";
  
   $.ajax({
     url: queryURL,
@@ -147,16 +40,54 @@ function displayMovie(movie){
     var poster = $("<img src=" + response.Poster+ ">");
 
       console.log(title);
-      $(".title").text(title);
+      $(".title").text("Title: " + title);
       $(".genre").text("Genre: " +genre);
       $(".rating").text("Rating: " + rating);
       $(".runtime").text("Run Time: " + runTime);
       $(".releaseDate").text("Release Date: " + releaseDate);
-      $(".synopsis1").text(summary);
+      $(".synopsis").text("Summary: " +summary);
       $(".cast").text("Actors: " +actors);
       $(".directors").text("Director(s): " + director);
       $(".movie-poster").text("");
       $(".movie-poster").append(poster);
   });
+});
 
-};
+// start youtube api call
+$(".searchButton").on("click", function (e) {
+  e.preventDefault();
+  console.log("clickedfff")
+  var request = gapi.client.youtube.search.list({
+      kind: "youtube#searchResult",
+      part: "snippet",
+      type: "video",
+      q: $(".search-input").val().replace(/%20/g, "+"),
+      maxResults: 1,
+      order: "relevance",
+  })
+  // execute request
+  request.execute(function (response) {
+      var str = response.result;
+      console.log(str)
+
+      $.each(response.result.items, function (index, item) {
+          $(".movie-trailer-video").append('<iframe width="560" height="315" src="https://www.youtube.com/embed/' + item.id.videoId + '" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+      
+        });
+  });
+  return false;
+});
+
+function init() {
+  console.log(gapi.client);
+
+  console.log('Search Started');
+  var apiKey = 'AIzaSyBi1ync9dV5CDPTmJmW135UexiYcMjmQWY';
+  var q = $('.search-input').val() + 
+
+  gapi.client.setApiKey(apiKey);
+  gapi.client.load('youtube', 'v3', function () {
+      isLoad = true;
+  });
+  console.log('Search Request');
+}
