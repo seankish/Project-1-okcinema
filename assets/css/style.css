@@ -90,3 +90,9 @@
     height: 45px;
     width: 200px;
   }
+  .movieGenres {
+    font-weight: bold;
+ }
+.btn {
+  margin: 5px;
+}
