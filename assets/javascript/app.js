@@ -13,6 +13,50 @@ var westernArray=["Hostiles", "The Hateful Eight", "Django Unchained", "The Lone
 var musicalsArray=["Enchanted","La La Land", "A Star is Born", "Mamma Mia", "Les Miserables", "Pitch Perfect", "Hairspray", "Dreamgirls", "The Sound of Music", "Grease"];
 var indieArray=["Lady Bird", "The Big Sick", "Call me by Your Name", "Boyhood", "Tangerine", "Winter's Bone", "Manchester by the Sea", "Blue Jay", "Krisha", "Green Room"];
 var thrillerArray=["Annabelle", "Child's Play", "Ma", "Get Out", "Don't Breathe", "Seven", "The Silence of the Lambs", "Shutter Island", "Inception", "Zodiac" ];
+// Combine arrays for random button
+var movieArray = (comedyArray.concat(horrorArray).concat(romanceArray).concat(actionArray).concat(sciFiArray).concat(dramaArray).concat(fantasyArray).concat(documentaryArray.concat(westernArray).concat(musicalsArray).concat(indieArray).concat(thrillerArray)));
+console.log(movieArray)
+// api call when clicking luckybutton
+$(".lucky-button").on("click", function(e){
+  e.preventDefault();
+  randomNumber = Math.floor(Math.random()*movieArray.length)
+  randomMovie =movieArray[randomNumber]
+  console.log(randomMovie) 
+  
+  
+  randomMovie.replace(" ","-");
+  var queryURL = "https://www.omdbapi.com/?t=" + randomMovie + "&apikey=trilogy";
+ 
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+
+  }).then(function(response) {
+    console.log(response);
+    var title = response.Title;
+    var genre = response.Genre;
+    var actors = response.Actors;
+    var rating = response.Rated;
+    var director = response.Director;
+    var releaseDate = response.Released;
+    var summary = response.Plot;
+    var runTime = response.Runtime;
+    var poster = $("<img src=" + response.Poster+ ">");
+
+      console.log(title);
+      $(".title").text("Title: " + title);
+      $(".genre").text("Genre: " +genre);
+      $(".rating").text("Rating: " + rating);
+      $(".runtime").text("Run Time: " + runTime);
+      $(".releaseDate").text("Release Date: " + releaseDate);
+      $(".synopsis").text("Summary: " +summary);
+      $(".cast").text("Actors: " +actors);
+      $(".directors").text("Director(s): " + director);
+      $(".movie-poster").text("");
+      $(".movie-poster").append(poster);
+  });
+});
+
 
 
 // // Lucky button
@@ -166,6 +210,7 @@ $(".searchButton").on("click", function(e){
 });
 
 // start youtube api call
+
 $(".searchButton").on("click", function (e) {
   e.preventDefault();
   console.log("clickedfff")
