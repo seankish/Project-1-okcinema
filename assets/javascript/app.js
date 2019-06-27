@@ -22,10 +22,12 @@ $(".movie-screen").css("display", "none");
 $("#searchButton").on("click", function(e){
   e.preventDefault();
   var movie = $("#search-input").val();
-  movie = movie.replace(" ","-");
+  
   displayMovie(movie);
   
 });
+
+
 
 
 //Function for clicking the "Feeling Lcuky" Button at the top of the screen
@@ -114,13 +116,19 @@ $(".fantasy").on("click", function(){
 
 
 
+
+
+
+
 //Function that will display all the movie data to the page
 function displayMovie(movie){
   $(".feeling_lucky").css("display", "none");
   $(".titlePage").css("display","none");
   $(".movie-screen").css("display", "inline");
-  
-  var queryURL = "https://www.omdbapi.com/?t=" + movie + "&apikey=trilogy";
+
+  //So we can use movie for querying youtube
+  var movieWithDash = movie.replace(" ","-");
+  var queryURL = "https://www.omdbapi.com/?t=" + movieWithDash + "&apikey=trilogy";
  
   $.ajax({
     url: queryURL,
