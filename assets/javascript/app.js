@@ -390,7 +390,7 @@ $(".searchButton").on("click", function(e){
  
   $.ajax({
     url: queryURL,
-    method: "GET"
+    method: "GET",
 
   }).then(function(response) {
     console.log(response);

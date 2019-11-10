@@ -11,7 +11,6 @@
     <title>~-SteamStack-~</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Passion+One:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -20,59 +19,28 @@
     <script src="https://apis.google.com/js/client.js"></script>
 </head>
 <body onload="init();">
-
-        <!-- Navbar -->
-        <nav class="navbar navbar-light bg-dark">
-                <div class="container">
-                        <a class="navbar-brand">WATCH</a>
-                        <form class="form-inline" id="ytForm">
-                                <div>
-
-                                <input class="form-control search-input mr-sm-2" type="text" id="textBox" placeholder="Movies, tv shows..." aria-label="Search">
-                                <button class="btn btn-color searchButton my-2 my-sm-0" type="submit">Search</button>
-                                </div>
-                        </form>
-                        <!-- TO DO: Redirect to different formatted page on Search -->
-                        <!-- <div class="input-group-append">
-                                <button id="submitBtn" class="btn btn-primary searchButton" type="submit"
-                                target="movie-details.html" onclick= "document.location.href='movie-details.html';">Search</button>
-                        </div> -->
-                        <!-- TO DO: Add random search -->
-                        <!-- <div class ="pt-5">
-                                <button type="button" class="btn btn-secondary lucky-button">Random</button>
-                        </div> -->
-                </div>
-        </nav>
         
         <!-- Start of header/navbar   -->
-        <!-- <div class= "d-flex justify-content-between flex-row header mb-3"> -->
-        <!-- <div class="container">
-                
-                <div class= "d-flex justify-content-between flex-row header mb-3">
-
-                <div class ="pt-5">
+        <div class= "d-flex justify-content-between flex-row header mb-3">
+                <!-- <div class ="pt-5">
                         <button type="button" class="btn btn-secondary lucky-button">I'm Feeling Lucky!</button>
-                </div>
+                </div> -->
                 <img id="logo" src="assets/images/okCinemaLogo.png" alt="OK-Cinema">
                 <form id="ytForm">
                         <div class="form-group">
                                 <div class="input-group mb-3 pt-5 mr-2">
-                                        <input type="text" id="textBox" class="form-control search-input" placeholder="Search for movies or tv shows" aria-label="Movie-search" aria-describedby="basic-addon2">
+                                        <input type="text" id="textBox" class="form-control search-input" placeholder="Search For a Movie!" aria-label="Movie-search" aria-describedby="basic-addon2">
                                         <div class="input-group-append">
-                                                <button id="submitBtn" class="btn btn-primary searchButton" type="submit"
-                                                target="movie-details.html">Search</button>
+                                                <button id="submitBtn" class="btn btn-primary searchButton" type="submit">Search</button>
                                         </div>
-
                                 </div>          
                         </div>
                 </form>
-
-                </div>
-        </div> -->
+        </div>
 
         <!-- Start of of movie content -->
         <div class ="container">
-                <div class="movie-general-info">
+                <div class="movie-general-info bg-dark p-4">
                         <h2 class="title"></h2>
                         <p class="rating"></p>
                         <p class="runtime"></p>
@@ -81,13 +49,14 @@
                         <div class ="movie-trailer-video"></div>
                         <div class="movie-poster"></div>
                 </div>
-                <div class="movie-more-info">
+
+                <div class="movie-more-info bg-light p-4">
                         <p class="synopsis"></p>
                         <p class="directors"></p>
                         <p class="cast"></p>
                 </div>
-        </div>
-      
+        </div>      
+        
         <script src="" async defer></script>
 </body>
            <!-- <footer class ="footer d-flex flex-row justify-content-center"> COPYRIGHT STEAMsTACK $QUAD 2019</footer> -->
