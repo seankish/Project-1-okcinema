@@ -406,12 +406,12 @@ $(".searchButton").on("click", function(e){
 
       console.log(title);
       $(".title").text(title);
-      $(".genre").text("Genre: " +genre);
-      $(".rating").text("Rating: " + rating);
-      $(".runtime").text("Run Time: " + runTime);
-      $(".releaseDate").text("Release Date: " + releaseDate);
-      $(".synopsis").text("Summary: " +summary);
-      $(".cast").text("Actors: " +actors);
+      $(".genre").text(genre);
+      $(".rating").text(rating);
+      $(".runtime").text(runTime);
+      $(".releaseDate").text(releaseDate);
+      $(".synopsis").text("Summary: " + summary);
+      $(".cast").text("Cast: " +actors);
       $(".directors").text("Director(s): " + director);
       $(".movie-poster").text("");
       $(".movie-poster").append(poster);

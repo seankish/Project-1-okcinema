@@ -29,7 +29,7 @@
 
 
 
-  .movie-general-info, .movie-more-info {
+  .movie-general-info {
     color: #fff;
   }
   /* .title {
@@ -124,10 +124,10 @@
     background: #515b99;
   } */
  .directors{
-   align-items: center;
+   /* align-items: center; */
    
-   border-left: 1px solid whitesmoke;
-   padding-left: 1px;
+   /* border-left: 1px solid whitesmoke; */
+   /* padding-left: 1px; */
  }
  footer {
    width:100%;
@@ -137,3 +137,24 @@
    background-color: #72bb4b;
    color: #fff;
  }
+
+ .container p { 
+   font-size: 14px;
+   color: #ccc;
+  }
+
+  h2 {
+    color: #ddd;
+  }
+
+  .inline {
+    display: inline;
+  }
+
+  .rating, .runtime, .genre {
+    padding-right: 10px;
+  }
+
+  .nav-color {
+    background-color: #1d1c1c;
+  }
