@@ -405,7 +405,7 @@ $(".searchButton").on("click", function(e){
     var poster = $("<img src=" + response.Poster+ ">");
 
       console.log(title);
-      $(".title").text("Title: " + title);
+      $(".title").text(title);
       $(".genre").text("Genre: " +genre);
       $(".rating").text("Rating: " + rating);
       $(".runtime").text("Run Time: " + runTime);

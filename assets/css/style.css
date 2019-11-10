@@ -21,12 +21,16 @@
     width: 100%;
     color: white;
   }
-  .title {
-    text-align: center;
+
+  .movie-general-info {
+    color: #fff;
   }
-  .genre {
+  /* .title {
     text-align: center;
-  }
+  } */
+  /* .genre {
+    text-align: center;
+  } */
   .movie-title-box {
     border: 5px solid;
     border-right: 5px solid;
@@ -46,7 +50,7 @@
     border-color: #170142;
     background: #515b99;
   }
-  .synopsis {
+  /* .synopsis {
     padding-left: 2px;
     border: 2.5px solid;
     height: 10%;
@@ -57,7 +61,7 @@
     color: white;
     border-color: #170142;
     background: #515b99;
-  }
+  } */
   .cast-directors-box {
     border: 2.5px solid;
     border-right: 5px solid;
@@ -104,10 +108,10 @@
     height: 45px;
     width: 200px;
   }
-  .movie-poster {
+  /* .movie-poster {
     
     text-align: center;
-  }
+  } */
   .searchButton {
     border: 1px solid black;
     background: #515b99;
