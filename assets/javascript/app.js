@@ -421,6 +421,9 @@ $(".searchButton").on("click", function(e){
 // start youtube api call
 $(".searchButton").on("click", function (e) {
   e.preventDefault();
+
+  $(".movie-trailer-video").empty();
+
   console.log("clickedfff")
   var request = gapi.client.youtube.search.list({
       kind: "youtube#searchResult",
