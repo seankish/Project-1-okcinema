@@ -384,6 +384,8 @@ function displayMovie(movie){
 $(".searchButton").on("click", function(e){
   e.preventDefault();
   var movie = $(".search-input").val();
+
+  $(".search-input").empty();
   
   movie.replace(" ","-");
   var queryURL = "https://www.omdbapi.com/?t=" + movie + "&apikey=trilogy";
