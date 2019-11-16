@@ -168,6 +168,7 @@ img {
   position: relative;
   text-align: center;
   color: white;
+  background-image: linear-gradient(to right, black , transparent);
 }
 
 #welcome-img {

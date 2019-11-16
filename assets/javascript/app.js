@@ -443,6 +443,7 @@ $(".searchButton").on("click", function (e) {
       console.log(str)
 
       $.each(response.result.items, function (index, item) {
+          console.log(item.id.videoId);
           $(".movie-trailer-video").append('<iframe width="560" height="315" src="https://www.youtube.com/embed/' + item.id.videoId + '" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
       });
   });
