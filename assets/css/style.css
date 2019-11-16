@@ -164,6 +164,26 @@ img {
   height: 315px;
 }
 
+.welcome-container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+#welcome-img {
+  width: 100%;
+  height: auto;
+  opacity: 0.1;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 
 
 /***********************
@@ -174,6 +194,9 @@ MEDIA QUERIES
   img {
     height: 500;
     width: auto;
+  }
+  .centered {
+    top: 50%;
   }
 }
 
@@ -187,6 +210,9 @@ MEDIA QUERIES
   img {
     width: 100%;
     height: auto;
+  }
+  .welcome-message {
+    font-size: 20px;
   }
 }
 
