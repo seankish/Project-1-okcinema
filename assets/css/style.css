@@ -182,6 +182,7 @@ img {
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
+  margin-right: -40px;
 }
 
 
@@ -213,10 +214,6 @@ MEDIA QUERIES
   }
   .welcome-message {
     font-size: 20px;
-  }
-  iframe {
-    width: 100%;
-    height: auto;
   }
 }
 
