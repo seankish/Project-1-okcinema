@@ -158,3 +158,8 @@
   .nav-color {
     background-color: #1d1c1c;
   }
+
+  img {
+    vertical-align: top;
+    height: 315px;
+  }

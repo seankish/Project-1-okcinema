@@ -376,7 +376,7 @@ function displayMovie(movie){
     var releaseDate = response.Released;
     var summary = response.Plot;
     var runTime = response.Runtime;
-    var poster = $("<img src=" + response.Poster+ ">");
+    var poster = $('<img height="315" src=" + response.Poster+ ">');
   })
 }
   
