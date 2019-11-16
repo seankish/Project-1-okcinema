@@ -1,165 +1,186 @@
 #logo {
     width: 200px;
     height: 150px;
-  }
-  .header {
-    /* background-color: black; */
-    /* border-bottom: 1px solid black; */
-  }
-  body {
-    background-color: #2a2a2a;
-  }
-  .lucky-button {
-    border: 1px solid black;
-    background: #515b99;
-    width: 100px;
-    height: 100px;
-  }
+}
+.header {
+  /* background-color: black; */
+  /* border-bottom: 1px solid black; */
+}
+body {
+  background-color: #2a2a2a;
+}
+.lucky-button {
+  border: 1px solid black;
+  background: #515b99;
+  width: 100px;
+  height: 100px;
+}
 
-  .navbar-brand {
-    font-family: 'Passion One', cursive;
-    color: #72bb4b !important;
-    font-size: 2rem;
-  }
-  .footer {
-    background-color: gray;
-    width: 100%;
-    color: white;
-  }
+.navbar-brand {
+  font-family: 'Passion One', cursive;
+  color: #72bb4b !important;
+  font-size: 2rem;
+}
+.footer {
+  background-color: gray;
+  width: 100%;
+  color: white;
+}
 
 
 
-  .movie-general-info {
-    color: #fff;
-  }
-  /* .title {
-    text-align: center;
-  } */
-  /* .genre {
-    text-align: center;
-  } */
-  .movie-title-box {
-    border: 5px solid;
-    border-right: 5px solid;
-    border-left: 5px solid;
-    border-bottom: 2.5px solid;
-    padding: 25px;
-    color: white;
-    border-color: #170142;
-    background: #515b99;
-  }
-  .r3-box {
-    border: 2.5px solid;
-    border-right: 5px solid;
-    border-left: 5px solid;
-    border-bottom: 2.5px solid;
-    color: white;
-    border-color: #170142;
-    background: #515b99;
-  }
-  /* .synopsis {
-    padding-left: 2px;
-    border: 2.5px solid;
-    height: 10%;
-    text-align: center;
-    border-right: 5px solid;
-    border-left: 5px solid;
-    border-bottom: 2.5px solid;
-    color: white;
-    border-color: #170142;
-    background: #515b99;
-  } */
-  .cast-directors-box {
-    border: 2.5px solid;
-    border-right: 5px solid;
-    border-left: 5px solid;
-    border-bottom: 2.5px solid;
-    color: white;
-    border-color: #170142;
-    background: #515b99;
-  }
-  .trailer-heading {
-    
-    align-items: center;
-    flex-grow: 0;
-    width:50%;
-    border: 2.5px solid;
-    border-right: 5px solid;
-    border-left: 5px solid;
-    border-bottom: 2.5px solid;
-    color: white;
-    border-color: #170142;
-    background: #515b99;
-    padding: 200px;
-    padding-top: 0%;
-  }
-  .review-heading {
-    align-items: center;
-    flex-grow: 0;
-    width: 50%;
-    border: 2.5px solid;
-    border-right: 5px solid;
-    border-left: 5px solid;
-    border-bottom: 2.5px solid;
-    color: white;
-    border-color: #170142;
-    background: #515b99;
-    padding: 200px;
-    padding-top: 0%;
-  }
- 
-  /* body {
-    margin: 1%;
-  } */
-  .lucky-button {
-    height: 45px;
-    width: 200px;
-  }
-  /* .movie-poster {
-    
-    text-align: center;
-  } */
-  /* .searchButton {
-    border: 1px solid black;
-    background: #515b99;
-  } */
- .directors{
-   /* align-items: center; */
-   
-   /* border-left: 1px solid whitesmoke; */
-   /* padding-left: 1px; */
- }
- footer {
-   width:100%;
- }
+.movie-general-info {
+  color: #fff;
+}
+/* .title {
+  text-align: center;
+} */
+/* .genre {
+  text-align: center;
+} */
+.movie-title-box {
+  border: 5px solid;
+  border-right: 5px solid;
+  border-left: 5px solid;
+  border-bottom: 2.5px solid;
+  padding: 25px;
+  color: white;
+  border-color: #170142;
+  background: #515b99;
+}
+.r3-box {
+  border: 2.5px solid;
+  border-right: 5px solid;
+  border-left: 5px solid;
+  border-bottom: 2.5px solid;
+  color: white;
+  border-color: #170142;
+  background: #515b99;
+}
+/* .synopsis {
+  padding-left: 2px;
+  border: 2.5px solid;
+  height: 10%;
+  text-align: center;
+  border-right: 5px solid;
+  border-left: 5px solid;
+  border-bottom: 2.5px solid;
+  color: white;
+  border-color: #170142;
+  background: #515b99;
+} */
+.cast-directors-box {
+  border: 2.5px solid;
+  border-right: 5px solid;
+  border-left: 5px solid;
+  border-bottom: 2.5px solid;
+  color: white;
+  border-color: #170142;
+  background: #515b99;
+}
+.trailer-heading {
+  
+  align-items: center;
+  flex-grow: 0;
+  width:50%;
+  border: 2.5px solid;
+  border-right: 5px solid;
+  border-left: 5px solid;
+  border-bottom: 2.5px solid;
+  color: white;
+  border-color: #170142;
+  background: #515b99;
+  padding: 200px;
+  padding-top: 0%;
+}
+.review-heading {
+  align-items: center;
+  flex-grow: 0;
+  width: 50%;
+  border: 2.5px solid;
+  border-right: 5px solid;
+  border-left: 5px solid;
+  border-bottom: 2.5px solid;
+  color: white;
+  border-color: #170142;
+  background: #515b99;
+  padding: 200px;
+  padding-top: 0%;
+}
 
- #submitBtn, .btn-color {
-   background-color: #72bb4b;
-   color: #fff;
- }
+/* body {
+  margin: 1%;
+} */
+.lucky-button {
+  height: 45px;
+  width: 200px;
+}
+/* .movie-poster {
+  
+  text-align: center;
+} */
+/* .searchButton {
+  border: 1px solid black;
+  background: #515b99;
+} */
+.directors{
+  /* align-items: center; */
+  
+  /* border-left: 1px solid whitesmoke; */
+  /* padding-left: 1px; */
+}
+footer {
+  width:100%;
+}
 
- .container p { 
-   font-size: 14px;
-   color: #ccc;
-  }
+#submitBtn, .btn-color {
+  background-color: #72bb4b;
+  color: #fff;
+}
 
-  h2 {
-    color: #ddd;
-  }
+.container p { 
+  font-size: 14px;
+  color: #ccc;
+}
 
-  .inline {
-    display: inline;
-  }
+h2 {
+  color: #ddd;
+}
 
-  .rating, .runtime, .genre {
-    padding-right: 10px;
-  }
+.inline {
+  display: inline;
+}
 
-  .nav-color {
-    background-color: #1d1c1c;
-  }
+.rating, .runtime, .genre {
+  padding-right: 10px;
+}
 
-  img {
-    vertical-align: top;
-    height: 315px;
+.nav-color {
+  background-color: #1d1c1c;
+}
+
+img {
+  vertical-align: top;
+  height: 315px;
+}
+
+
+
+/***********************
+MEDIA QUERIES
+***********************/
+
+@media only screen and (max-width: 576px) {
+  .nav-container {
+    padding: 0;
   }
+  #textBox {
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 342px) {
+  #textBox {
+    margin-top: 5px;
+  }
+}
