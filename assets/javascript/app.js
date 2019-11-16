@@ -385,7 +385,6 @@ $(".searchButton").on("click", function(e){
   e.preventDefault();
   var movie = $(".search-input").val();
 
-  $(".search-input").val('');
   $(".welcome-container").hide();
   
   movie.replace(" ","-");
@@ -442,8 +441,10 @@ $(".searchButton").on("click", function (e) {
       var str = response.result;
       console.log(str)
 
+      $(".search-input").val('');
+
       $.each(response.result.items, function (index, item) {
-          console.log(item.id.videoId);
+          console.log("Video id: " + item.id.videoId);
           $(".movie-trailer-video").append('<iframe width="560" height="315" src="https://www.youtube.com/embed/' + item.id.videoId + '" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
       });
   });
