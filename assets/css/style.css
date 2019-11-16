@@ -169,10 +169,13 @@ img {
   text-align: center;
   color: white;
   background-image: linear-gradient(to right, black , transparent);
+  overflow-x:hidden;
+  overflow-y: hidden;
+  position:relative;
 }
 
 #welcome-img {
-  width: 100%;
+  min-width: 1600px;
   height: auto;
   opacity: 0.1;
 }
@@ -180,7 +183,7 @@ img {
 /* Centered text */
 .centered {
   position: absolute;
-  top: 40%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   margin-right: -40px;
@@ -201,9 +204,6 @@ MEDIA QUERIES
     height: 500;
     width: auto;
   }
-  .centered {
-    top: 50%;
-  }
 }
 
 @media only screen and (max-width: 576px) {
@@ -219,6 +219,9 @@ MEDIA QUERIES
   }
   .welcome-message {
     font-size: 20px;
+  }
+  .centered {
+    top: 15%;
   }
 }
 
