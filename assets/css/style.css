@@ -170,12 +170,23 @@ img {
 MEDIA QUERIES
 ***********************/
 
+@media only screen and (max-width: 991px) {
+  img {
+    height: 500;
+    width: auto;
+  }
+}
+
 @media only screen and (max-width: 576px) {
   .nav-container {
     padding: 0;
   }
   #textBox {
     margin-top: 10px;
+  }
+  img {
+    width: 100%;
+    height: auto;
   }
 }
 
