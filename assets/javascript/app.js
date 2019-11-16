@@ -379,6 +379,46 @@ function displayMovie(movie){
     var poster = $('<img height="315" src=" + response.Poster+ ">');
   })
 }
+
+// Home Omdb api call
+$(".homeSearchButton").on("click", function(e){
+  e.preventDefault();
+  var movie = $(".home-search-input").val();
+
+  $(".welcome-container").hide();
+  
+  movie.replace(" ","-");
+  var queryURL = "https://www.omdbapi.com/?t=" + movie + "&apikey=trilogy";
+ 
+  $.ajax({
+    url: queryURL,
+    method: "GET",
+
+  }).then(function(response) {
+    console.log(response);
+    var title = response.Title;
+    var genre = response.Genre;
+    var actors = response.Actors;
+    var rating = response.Rated;
+    var director = response.Director;
+    var releaseDate = response.Released;
+    var summary = response.Plot;
+    var runTime = response.Runtime;
+    var poster = $("<img src=" + response.Poster+ ">");
+
+      console.log(title);
+      $(".title").text(title);
+      $(".genre").text(genre);
+      $(".rating").text(rating);
+      $(".runtime").text(runTime);
+      $(".releaseDate").text(releaseDate);
+      $(".synopsis").text("Summary: " + summary);
+      $(".cast").text("Cast: " +actors);
+      $(".directors").text("Director(s): " + director);
+      $(".movie-poster").text("");
+      $(".movie-poster").append(poster);
+  });
+});
   
 // Omdb api call
 $(".searchButton").on("click", function(e){
@@ -418,6 +458,37 @@ $(".searchButton").on("click", function(e){
       $(".movie-poster").text("");
       $(".movie-poster").append(poster);
   });
+});
+
+// home start youtube api call
+$(".homeSearchButton").on("click", function (e) {
+  e.preventDefault();
+
+  $(".movie-trailer-video").empty();
+
+  console.log("clickedfff")
+  var request = gapi.client.youtube.search.list({
+      kind: "youtube#searchResult",
+      part: "snippet",
+      type: "video",
+      q: $(".home-search-input").val().replace(/%20/g, "+") + "trailer",
+      maxResults: 1,
+      order: "relevance",
+  })
+  
+  // execute request
+  request.execute(function (response) {
+      var str = response.result;
+      console.log(str)
+
+      $(".search-input").val('');
+
+      $.each(response.result.items, function (index, item) {
+          console.log("Video id: " + item.id.videoId);
+          $(".movie-trailer-video").append('<iframe width="560" height="315" src="https://www.youtube.com/embed/' + item.id.videoId + '" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+      });
+  });
+  return false;
 });
 
 // start youtube api call

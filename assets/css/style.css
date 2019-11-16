@@ -180,10 +180,14 @@ img {
 /* Centered text */
 .centered {
   position: absolute;
-  top: 30%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   margin-right: -40px;
+}
+
+.home-ytForm {
+  margin-top: 60px;
 }
 
 
