@@ -393,6 +393,8 @@ $(".homeSearchButton").on("click", function(e){
   e.preventDefault();
   var movie = $(".home-search-input").val();
 
+  $(".movie-container").show();
+
   $(".welcome-container").hide();
   
   movie.replace(" ","-");
