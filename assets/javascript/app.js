@@ -355,7 +355,15 @@ $(".fantasy").on("click", function(){
   displayMovie(randomMovie);
 
 });
+
+$( document ).ready(function() {
+  $(".movie-container").hide();
+});
+
 function displayMovie(movie){
+
+  $(".movie-container").show();
+  
   $(".feeling_lucky").css("display", "none");
   $(".titlePage").css("display","none");
   $(".movie-screen").css("display", "inline");
@@ -522,9 +530,6 @@ $(".searchButton").on("click", function (e) {
   return false;
 });
 
-
-
-
 function init() {
   console.log(gapi.client);
 
@@ -538,3 +543,5 @@ function init() {
   });
   console.log('Search Request');
 }
+
+
